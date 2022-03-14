@@ -18,10 +18,10 @@ def w2f(wavename: str):
     f.close()
     print('文件写出成功，文件名：file_out，请自行修改原始名称和后缀名')
 
-if len(sys.argv)!=3:
-    print('文件wav互转工具 by cloudreflection\nuseage: python converter.py [option]\n   -f <文件名> 将文件转换为wav\n   -w <文件名> 将此工具生成的wav转换回文件')
-else:
-    if sys.argv[1]=='-f':
+if __name__=="__main":
+    if len(sys.argv)!=3:
+        print('文件wav互转工具 by cloudreflection\nuseage: python converter.py [option]\n   -f <文件名> 将文件转换为wav\n   -w <文件名> 将此工具生成的wav转换回文件')
+    elif sys.argv[1]=='-f':
         f2w(sys.argv[2])
     elif sys.argv[1]=='-w':
         w2f(sys.argv[2])
